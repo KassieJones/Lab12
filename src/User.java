@@ -1,23 +1,27 @@
 public class User extends Player {
+	private String userChoice;
 
-		public User (String n){
-			super();
-		}
-		
-		public Roshambo generateRoshambo(){
-			setValue(Roshambo.PAPER);
-			return getValue();
-		}
+	public String getUserChoice() {
+		return userChoice;
+	}
 
-		private void setValue(Roshambo paper) {
-			// TODO Auto-generated method stub
-			
-		}
+	public void setUserChoice(String userChoice) {
+		this.userChoice = userChoice;
+	}
 
-		private Roshambo getValue() {
-			// TODO Auto-generated method stub
-			return null;
+	@Override
+	public Roshambo generateRoshambo() {
+		if (getUserChoice().equalsIgnoreCase("rock")) {
+			return Roshambo.ROCK;
+		} else if (getUserChoice().equalsIgnoreCase("paper")) {
+			return Roshambo.PAPER;
 		}
+		return Roshambo.SCISSORS;
+	}
+
+	public void setName(String name) {
+		// TODO Auto-generated method stub
 		
-		
+	}
+
 }

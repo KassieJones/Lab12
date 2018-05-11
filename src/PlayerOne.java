@@ -1,19 +1,14 @@
-
 public class PlayerOne extends Player {
-	
-	public PlayerOne () {
-		
+
+	@Override
+	public String getName() {
+		return "The Rock";
 	}
-	
-	public PlayerOne (String name) {
-		setTurnChoice(Roshambo.ROCK);
-		setName(name);
-	}
-	
+
 	@Override
 	public Roshambo generateRoshambo() {
-		setTurnChoice(Roshambo.ROCK);
-		return getTurnChoice();
+		
+		return Roshambo.ROCK;
 	}
 
 }

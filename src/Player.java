@@ -1,7 +1,9 @@
 public abstract class Player {
 
-	String name;
-	Roshambo turnChoice;
+	private String name;
+	
+	public Player() {
+	}
 	
 	public String getName() {
 		return name;
@@ -9,12 +11,7 @@ public abstract class Player {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Roshambo getTurnChoice() {
-		return turnChoice;
-	}
-	public void setTurnChoice(Roshambo turnChoice) {
-		this.turnChoice = turnChoice;
-	}
+
 	
 	public abstract Roshambo generateRoshambo();
 	

@@ -1,18 +1,19 @@
+//matches Antonella  DONT TOUCH
 public enum Roshambo {
 
-	ROCK("Rock"), 
-	PAPER("Paper"), 
-	SCISSORS("Scissors");
+	ROCK, PAPER, SCISSORS;
 
-	private String string;
-	
-	Roshambo(String name){
-		string = name;
-	}
-	
-	@Override
+
 	public String toString() {
-		return string;
+		switch(this) {
+		case ROCK:
+			return "Rock";
+		case PAPER:
+			return "Paper";
+		case SCISSORS:
+			return "Scissors";
+		}
+		return super.toString();
 	}
 
 }

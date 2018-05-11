@@ -1,30 +1,13 @@
 import java.util.Scanner;
 
+// You can add your own validation methods if needed
 public class Validator {
-
-	public static String getChoice(Scanner sc, String prompt, String limit) {
-		String s = "";
-
-		boolean isValid = false;
-		while (isValid == false) {
-			System.out.print(prompt);
-			if (sc.hasNext()) {
-				s = sc.next(); // read user entry
-				sc.nextLine(); // discard any other data entered on the line
-				if (limit.indexOf(String.valueOf(s.charAt(0)).toLowerCase()) > -1) {
-					isValid = true;
-				} else {
-					System.out.println("Error! Invalid entry. Try again.");
-				}
-			}
-		}
-
-		return String.valueOf(s.charAt(0));
-	}
-
+	
+	
 	public static String getString(Scanner sc, String prompt) {
 		System.out.print(prompt);
-		String s = sc.next(); // read user entry
+		String s = sc.next();
+		System.out.println();// read user entry
 		sc.nextLine(); // discard any other data entered on the line
 		return s;
 	}

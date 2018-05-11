@@ -1,29 +1,23 @@
 import java.util.Random;
 
 public class PlayerTwo extends Player {
-	
-	public PlayerTwo() {
-	}
-	
-	public PlayerTwo(String name) {
-		setName(name);
-		setTurnChoice(generateRoshambo());
+
+	public String getName() {
+		return "Random Player";
 	}
 	
 	@Override
 	public Roshambo generateRoshambo() {
 		Random rand = new Random();
-		int choice = rand.nextInt(3) + 1;
-		if (choice == 1) {
-			setTurnChoice(Roshambo.ROCK);
+		int randNum = rand.nextInt(3) + 1;
+		//System.out.println(randNum); 
+		if (randNum == 1) {
+			return Roshambo.ROCK;
 		}
-		else if (choice == 2) {
-			setTurnChoice(Roshambo.PAPER);
+		if (randNum == 2) {
+			return Roshambo.PAPER;
 		}
-		else {
-			setTurnChoice(Roshambo.SCISSORS);
-		}
-		return getTurnChoice();
+		return Roshambo.SCISSORS;
 	}
 
 }
